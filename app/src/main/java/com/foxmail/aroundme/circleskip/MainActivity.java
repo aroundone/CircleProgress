@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     private CircleProgress circleProgress;
     private CircleProgress circleProgress1;
     private CircleProgress circleProgress2;
-    private Subscription subscription;
 
 
     @Override
@@ -33,40 +32,40 @@ public class MainActivity extends AppCompatActivity {
         circleProgress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "click", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "click", Toast.LENGTH_SHORT).show();
             }
         });
 
         circleProgress.setOnLoadingComplete(new CircleProgress.IOnLoadingComplete() {
             @Override
             public void OnLoadingComplete() {
-                Toast.makeText(MainActivity.this, "Complete", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Complete", Toast.LENGTH_SHORT).show();
             }
         });
         circleProgress1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "click", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "click", Toast.LENGTH_SHORT).show();
             }
         });
 
         circleProgress1.setOnLoadingComplete(new CircleProgress.IOnLoadingComplete() {
             @Override
             public void OnLoadingComplete() {
-                Toast.makeText(MainActivity.this, "Complete", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Complete", Toast.LENGTH_SHORT).show();
             }
         });
         circleProgress2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "click", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "click", Toast.LENGTH_SHORT).show();
             }
         });
 
         circleProgress2.setOnLoadingComplete(new CircleProgress.IOnLoadingComplete() {
             @Override
             public void OnLoadingComplete() {
-                Toast.makeText(MainActivity.this, "Complete", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Complete", Toast.LENGTH_SHORT).show();
             }
         });
 

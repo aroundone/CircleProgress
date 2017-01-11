@@ -32,7 +32,7 @@
         gzl:textColor="#FFFFFF"
         gzl:text="Run"
         gzl:textSize="18sp"
-        gzl:stillTime="5000"
+        gzl:stillTime="6000"
         />
 
     <com.foxmail.aroundme.circleskip.CircleProgress
