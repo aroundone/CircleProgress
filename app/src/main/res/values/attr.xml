@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义进度条-->
+    <declare-styleable name="CircleProgress">
+        <attr name="circleColor" format="color" /><!--内圆颜色-->
+        <attr name="ringWidth" format="dimension" /><!--圆环宽度-->
+        <attr name="ringColor" format="color" /><!--圆环颜色-->
+        <attr name="textColor" format="color|reference" /><!--字体颜色-->
+        <attr name="text" format="string|reference" /><!--字体内容-->
+        <attr name="textSize" format="dimension|reference" /><!--字体大小-->
+        <attr name="stillTime" format="integer" /><!--字体大小-->
+    </declare-styleable>
+</resources>
