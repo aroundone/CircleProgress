@@ -6,11 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center_horizontal"
+    android:gravity="center"
     tools:context="com.foxmail.aroundme.circleskip.MainActivity">
 
+    <!--顺时针增加-->
     <com.foxmail.aroundme.circleskip.CircleProgress
-        android:id="@+id/custom_progress"
+        android:id="@+id/circleProgress1"
         android:layout_width="45dp"
         android:layout_height="45dp"
         gzl:circleColor="#64000000"
@@ -20,10 +21,12 @@
         gzl:text="Skip"
         gzl:textSize="14sp"
         gzl:stillTime="3000"
+        gzl:direction="ClockWise"
+        gzl:offset="InCrease"
         />
-
+    <!--顺时针减少-->
     <com.foxmail.aroundme.circleskip.CircleProgress
-        android:id="@+id/custom_progress1"
+        android:id="@+id/circleProgress2"
         android:layout_width="100dp"
         android:layout_height="100dp"
         gzl:circleColor="@android:color/holo_blue_light"
@@ -33,10 +36,27 @@
         gzl:text="Run"
         gzl:textSize="18sp"
         gzl:stillTime="6000"
+        gzl:direction="ClockWise"
+        gzl:offset="DeCrease"
         />
-
+    <!--逆时针增加-->
     <com.foxmail.aroundme.circleskip.CircleProgress
-        android:id="@+id/custom_progress2"
+        android:id="@+id/circleProgress3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        gzl:circleColor="@android:color/holo_green_light"
+        gzl:ringWidth="10dp"
+        gzl:ringColor="@android:color/holo_purple"
+        gzl:textColor="#FFFFFF"
+        gzl:text="Run"
+        gzl:textSize="18sp"
+        gzl:stillTime="6000"
+        gzl:direction="CounterClockWise"
+        gzl:offset="InCrease"
+        />
+    <!--逆时针减少-->
+    <com.foxmail.aroundme.circleskip.CircleProgress
+        android:id="@+id/circleProgress4"
         android:layout_width="200dp"
         android:layout_height="200dp"
         gzl:circleColor="@android:color/holo_orange_light"
@@ -46,6 +66,8 @@
         gzl:text="Run"
         gzl:textSize="18sp"
         gzl:stillTime="10000"
+        gzl:direction="CounterClockWise"
+        gzl:offset="DeCrease"
         />
 
 </LinearLayout>

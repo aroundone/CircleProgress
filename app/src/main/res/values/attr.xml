@@ -9,5 +9,15 @@
         <attr name="text" format="string|reference" /><!--字体内容-->
         <attr name="textSize" format="dimension|reference" /><!--字体大小-->
         <attr name="stillTime" format="integer" /><!--字体大小-->
+        <!--方向-->
+        <attr name="direction" format="integer" >
+            <enum name="ClockWise" value="0"/>
+            <enum name="CounterClockWise" value="1"/>
+        </attr>
+        <!--偏移量-->
+        <attr name="offset" format="integer" >
+            <enum name="InCrease" value="0"/>
+            <enum name="DeCrease" value="1"/>
+        </attr>
     </declare-styleable>
 </resources>
