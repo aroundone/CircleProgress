@@ -45,6 +45,10 @@
 <img src="https://github.com/aroundone/GifRepository/blob/master/CircleProgress/CircleProgress.gif" width=360 height=640 />
 
 ## 版本更新
+
+###  v1.2
+添加至JikPack
+
 ###  v1.1
 
 添加两个属性direction(方向)和offset(偏移量)
