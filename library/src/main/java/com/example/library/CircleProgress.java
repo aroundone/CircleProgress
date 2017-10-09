@@ -1,4 +1,4 @@
-package com.foxmail.aroundme.circleskip;
+package com.example.library;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -9,7 +9,6 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.support.annotation.IntDef;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 
 import java.lang.annotation.Retention;

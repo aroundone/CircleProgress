@@ -1,20 +1,14 @@
 package com.foxmail.aroundme.circleskip;
 
-import android.os.Handler;
-import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import java.util.concurrent.TimeUnit;
+import com.example.library.CircleProgress;
 
-import rx.Observable;
-import rx.Subscriber;
-import rx.Subscription;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private CircleProgress circleProgress1;
     private CircleProgress circleProgress2;

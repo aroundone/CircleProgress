@@ -10,7 +10,7 @@
     tools:context="com.foxmail.aroundme.circleskip.MainActivity">
 
     <!--顺时针增加-->
-    <com.foxmail.aroundme.circleskip.CircleProgress
+    <com.example.library.CircleProgress
         android:id="@+id/circleProgress1"
         android:layout_width="45dp"
         android:layout_height="45dp"
@@ -25,7 +25,7 @@
         gzl:offset="InCrease"
         />
     <!--顺时针减少-->
-    <com.foxmail.aroundme.circleskip.CircleProgress
+    <com.example.library.CircleProgress
         android:id="@+id/circleProgress2"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -40,7 +40,7 @@
         gzl:offset="DeCrease"
         />
     <!--逆时针增加-->
-    <com.foxmail.aroundme.circleskip.CircleProgress
+    <com.example.library.CircleProgress
         android:id="@+id/circleProgress3"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -55,7 +55,7 @@
         gzl:offset="InCrease"
         />
     <!--逆时针减少-->
-    <com.foxmail.aroundme.circleskip.CircleProgress
+    <com.example.library.CircleProgress
         android:id="@+id/circleProgress4"
         android:layout_width="200dp"
         android:layout_height="200dp"
