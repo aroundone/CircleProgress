@@ -11,7 +11,7 @@
 
 
    ```
-   	allprojects {
+   allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
@@ -21,7 +21,6 @@
    
    ```
   compile 'com.github.aroundone:CircleProgress:v1.2'
-  
    ```
 
 ## 注意
