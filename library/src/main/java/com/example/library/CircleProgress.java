@@ -196,9 +196,6 @@ public class CircleProgress extends View {
 
 
     private void setAnimation(float start, float stop) {
-        if (mStillTime == 0) {
-            throw new RuntimeException("Please set a value greater than 0 at XML");
-        }
         ValueAnimator valueAnimator = ValueAnimator.ofFloat(start, stop);
         valueAnimator.setDuration(mStillTime);
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -221,6 +218,10 @@ public class CircleProgress extends View {
         } else if(mOffset == CircleProgress.DeCrease) {
             setAnimation(100, 0);
         }
+    }
+
+    public void setmStillTime(int time) {
+        mStillTime = time;
     }
 
     public void setOnLoadingComplete(OnLoadingComplete onLoadingComplete) {
