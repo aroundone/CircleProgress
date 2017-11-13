@@ -6,8 +6,22 @@
 
   圆形进度条由一个环形和一个内部圆以及内部圆的字体组成
   他们的半径都是由整个控件的宽和高控制，所以没有溢出情况
+  
+## 引入方式
 
-  进度滚动来自于属性动画，这样看起来很平滑
+
+   ```
+   allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+   ```
+   
+   ```
+  compile 'com.github.aroundone:CircleProgress:v1.2'
+   ```
 
 ## 注意
 
