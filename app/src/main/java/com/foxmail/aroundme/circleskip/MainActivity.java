@@ -59,7 +59,6 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "click 3", Toast.LENGTH_SHORT).show();
-
             }
         });
 
