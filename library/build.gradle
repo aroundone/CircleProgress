@@ -4,12 +4,12 @@ apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.aroundone'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
 
@@ -26,9 +26,84 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:25.+'
-    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:26.+'
+}
+/** 以下开始是将Android Library上传到jcenter的相关配置**/
+
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+//项目主页
+def siteUrl = 'https://github.com/aroundone/CircleProgress'    // project homepage
+//项目的版本控制地址
+def gitUrl = 'https://github.com/aroundone/CircleProgress.git' // project git
+
+//发布到组织名称名字，必须填写
+group = "test.gzl"
+//发布到JCenter上的项目名字，必须填写
+def libName = "CircleProgress"
+// 版本号，下次更新是只需要更改版本号即可
+version = "1.1"
+/**  上面配置后上传至jcenter后的编译路径是这样的： compile 'cn.bluemobi.dylan:sqlitelibrary:1.0'  **/
+
+//生成源文件
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+
+//上传到jcenter所需要的源码文件
+artifacts {
+    archives sourcesJar
+}
+
+// 配置maven库，生成POM.xml文件
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+                name 'This is a lightweight SQLite database framework'
+                url siteUrl
+                licenses {
+                    license {
+                        name 'This is a lightweight SQLite database framework'
+                        url 'https://github.com/linglongxin24/SQLite'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'aroundme'
+                        name 'ziliangguo'
+                        email '1121068083@qq.com'
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}
+
+//上传到jcenter
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+bintray {
+    user = properties.getProperty("bintray.user")    //读取 local.properties 文件里面的 bintray.user
+    key = properties.getProperty("bintray.apikey")   //读取 local.properties 文件里面的 bintray.apikey
+    configurations = ['archives']
+    pkg {
+        repo = "CircleProgress"
+        name = "CircleProgress"    //发布到JCenter上的项目名字，必须填写
+        desc = 'an android ui library'    //项目描述
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ["Apache-2.0"]
+        publish = true
+    }
 }
